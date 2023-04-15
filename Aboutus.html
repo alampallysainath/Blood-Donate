@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Donate</title>
+    <link rel="icon" type="image/x-icon" href="./bloodicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+    <style>
+        body{
+           padding: 0PX;
+           margin:0px;
+        }
+		.navbar {
+			background-color: #223122; 
+			overflow: hidden; 
+			position: fixed; 
+			top: 0; 
+			width: 100%; 
+			z-index: 1;
+		}
+		.navbar a {
+			float: left; 
+			color: #f2f2f2; 
+			text-align: center;
+			padding: 14px 16px; 
+			text-decoration:solid; 
+			font-size: 17px; 
+			transition: background-color 0.3s ease; 
+		}
+		.navbar a:hover {
+			background-color: #ddd;
+			color: black;
+            font-size: 20px;
+		}
+		.active {
+			background-color: #4CAF50;
+			color: white;
+		}
+		.search-container {
+			float: right;
+			border: none;
+		}
+		input[type=text] {
+			padding: 6px;
+			margin-top: 8px;
+			font-size: 17px;
+			border: none;
+			border-radius: 5px;
+		}
+		button[type=submit] {
+			float: right;
+			padding: 6px 10px;
+			margin-top: 8px;
+			margin-right: 16px;
+			background: #ddd;
+			font-size: 17px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			border: solid black;
+
+		}
+		.clearfix {
+			clear: both;
+		}
+        .footer {
+			background-color: #272626;
+			text-align: start;
+			font-size: 14px;
+			padding: 20;
+			height: 50vh;
+			color: rgb(244, 241, 241);
+		}
+
+		.footer a {
+			color: #777;
+			text-decoration: none;
+		}
+
+		.footer a:hover {
+			color: #555;
+		}
+
+		.footer ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: inline-block;
+		}
+
+		.footer ul li {
+			display: inline-block;
+			margin: 0 10px;
+		}
+
+		.footer ul li a {
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			background-color: #555555;
+			background-size: 100%;
+			color: #fff;
+			text-align: center;
+			line-height: 30px;
+			border-radius: 50%;
+			transition: all 0.3s ease-in-out;
+		}
+
+		.footer ul li a:hover {
+			transform: translateY(-5px);
+			box-shadow: 10px 15px 20px rgba(24, 243, 24, 0.3);
+			color:#f50bea;
+		}
+		
+         marquee{
+            margin-top: 1vh;
+         }  
+		 #footer1{
+			margin-left: 40vw;
+		 }  
+         #prashu{
+            width:100vw;
+            height:50vh;
+            background-color: #17e1de;
+            margin-top: 8.2vh;
+            transition: all 0.8s;
+         }
+        #prashupic{
+            width:20vw;
+            height:40vh;
+            background-image: url(./prashanth.jpeg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            position: absolute;
+            top:11vh;
+            left:10vw;
+            transition: all 0.8s;
+            border-radius: 10px;
+        }
+        #prashupic:hover{
+            transform: translate(20px,20px);
+        }
+        #prashuinfo{
+            width:50vw;
+            height:40vh;
+            position: absolute;
+            top:11vh;
+            right:10vw;
+            transition: all 0.8s;
+            border-radius: 10px;
+        }
+        #prashuinfo:hover{
+            transform: translate(20px,20px);
+        }
+        #vijaybabu{
+            width:100vw;
+            height:50vh;
+            background-color: #17e1de;
+            margin-top: 8.2vh;
+            transition: all 0.8s;
+         }
+        #vijaypic{
+            width:20vw;
+            height:40vh;
+            background-image: url(./vijay.JPG);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            position: relative;
+            top:5vh;
+            left:10vw;
+            transition: all 0.8s;
+            border-radius: 10px;
+        }
+        #vijaypic:hover{
+            transform: translate(20px,20px);
+        }
+        #vijayinfo{
+            width:50vw;
+            height:40vh;
+          position: absolute;
+            top:72vh;
+            right:10vw;
+            transition: all 0.8s;
+            border-radius: 10px;
+        }
+        #vijayinfo:hover{
+            transform: translate(20px,20px);
+        }
+        #bhavani{
+            width:100vw;
+            height:50vh;
+            background-color: #17e1de;
+            margin-top: 8.2vh;
+            transition: all 0.8s;
+         }
+        #bhavanipic{
+            width:20vw;
+            height:40vh;
+            background-image: url(./bhavani.jpeg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            position: relative;
+            top:5vh;
+            left:10vw;
+            transition: all 0.8s;
+            border-radius: 10px;
+        }
+        #bhavanipic:hover{
+            transform: translate(20px,20px);
+        }
+        #bhavaniinfo{
+            width:50vw;
+            height:40vh;
+            position: relative;
+            bottom: 35vh;
+            left:40vw;
+            transition: all 0.8s;
+            border-radius: 10px;
+        }
+        #bhavaniinfo:hover{
+            transform: translate(20px,20px);
+        }
+        #leela{
+            width:100vw;
+            height:50vh;
+            background-color: #17e1de;
+            margin-top: 8.2vh;
+            transition: all 0.8s;
+         }
+        #leelapic{
+            width:20vw;
+            height:40vh;
+            background-image: url(./leela.jpeg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            position: relative;
+            top:5vh;
+            left:10vw;
+            transition: all 0.8s;
+            border-radius: 10px;
+        }
+        #leelapic:hover{
+            transform: translate(20px,20px);
+        }
+        #leelainfo{
+            width:50vw;
+            height:40vh;
+            position: relative;
+            bottom: 35vh;
+            left:40vw;
+            transition: all 0.8s;
+            border-radius: 10px;
+        }
+        #leelainfo:hover{
+            transform: translate(20px,20px);
+        }
+        #baghya{
+            width:100vw;
+            height:50vh;
+            background-color: #17e1de;
+            margin-top: 8.2vh;
+            transition: all 0.8s;
+         }
+        #baghyapic{
+            width:20vw;
+            height:40vh;
+            background-image: url(./baghya1.jpeg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            position: relative;
+            top:5vh;
+            left:10vw;
+            transition: all 0.8s;
+            border-radius: 10px;
+        }
+        #baghyapic:hover{
+            transform: translate(20px,20px);
+        }
+        #baghyainfo{
+            width:50vw;
+            height:40vh;
+            position: relative;
+            bottom: 35vh;
+            left:40vw;
+            transition: all 0.8s;
+            border-radius: 10px;
+        }
+        #baghyainfo:hover{
+            transform: translate(20px,20px);
+        }
+        #raja{
+            width:100vw;
+            height:50vh;
+            background-color: #17e1de;
+            margin-top: 8.2vh;
+            transition: all 0.8s;
+         }
+        #rajapic{
+            width:20vw;
+            height:40vh;
+            background-image: url(raja\ pic.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            position: relative;
+            top:5vh;
+            left:10vw;
+            transition: all 0.8s;
+            border-radius: 10px;
+        }
+        #rajapic:hover{
+            transform: translate(20px,20px);
+        }
+        #rajainfo{
+            width:50vw;
+            height:40vh;
+            position: relative;
+            bottom: 35vh;
+            left:40vw;
+            transition: all 0.8s;
+            border-radius: 10px;
+        }
+        #rajainfo:hover{
+            transform: translate(20px,20px);
+        }
+        #soumya{
+            width:100vw;
+            height:50vh;
+            background-color: #17e1de;
+            margin-top: 8.2vh;
+            transition: all 0.8s;
+         }
+        #soumyapic{
+            width:20vw;
+            height:40vh;
+            background-image: url(./soumya1.jpeg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            position: relative;
+            top:5vh;
+            left:10vw;
+            transition: all 0.8s;
+            border-radius: 10px;
+        }
+        #soumyapic:hover{
+            transform: translate(20px,20px);
+        }
+        #soumyainfo{
+            width:50vw;
+            height:40vh;
+            position: relative;
+            bottom: 35vh;
+            left:40vw;
+            transition: all 0.8s;
+            border-radius: 10px;
+        }
+        #soumyainfo:hover{
+            transform: translate(20px,20px);
+        }
+        #naveen{
+            width:100vw;
+            height:50vh;
+            background-color: #17e1de;
+            margin-top: 8.2vh;
+            transition: all 0.8s;
+         }
+        #naveenpic{
+            width:20vw;
+            height:40vh;
+            background-image: url(./navven.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            position: relative;
+            top:5vh;
+            left:10vw;
+            transition: all 0.8s;
+            border-radius: 10px;
+        }
+        #naveenpic:hover{
+            transform: translate(20px,20px);
+        }
+        #naveeninfo{
+            width:50vw;
+            height:40vh;
+            position: relative;
+            bottom: 35vh;
+            left:40vw;
+            transition: all 0.8s;
+            border-radius: 10px;
+        }
+        #naveeninfo:hover{
+            transform: translate(20px,20px);
+        }
+        #praveen{
+            width:100vw;
+            height:50vh;
+            background-color: #17e1de;
+            margin-top: 8.2vh;
+            transition: all 0.8s;
+         }
+        #praveenpic{
+            width:20vw;
+            height:40vh;
+            background-image: url(./pravven.PNG);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            position: relative;
+            top:5vh;
+            left:10vw;
+            transition: all 0.8s;
+            border-radius: 10px;
+        }
+        #praveenpic:hover{
+            transform: translate(20px,20px);
+        }
+        #praveeninfo{
+            width:50vw;
+            height:40vh;
+            position: relative;
+            bottom: 35vh;
+            left:40vw;
+            transition: all 0.8s;
+            border-radius: 10px;
+        }
+        #praveeninfo:hover{
+            transform: translate(20px,20px);
+        }
+        #sainath{
+            width:100vw;
+            height:50vh;
+            background-color: #17e1de;
+            margin-top: 8.2vh;
+            transition: all 0.8s;
+         }
+        #saipic{
+            width:20vw;
+            height:40vh;
+            background-image: url(./sainath.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            position: relative;
+            top:5vh;
+            left:10vw;
+            transition: all 0.8s;
+            border-radius: 10px;
+        }
+        #saipic:hover{
+            transform: translate(20px,20px);
+        }
+        #saiinfo{
+            width:50vw;
+            height:40vh;
+            position: relative;
+            bottom: 35vh;
+            left:40vw;
+            transition: all 0.8s;
+            border-radius: 10px;
+        }
+        #saiinfo:hover{
+            transform: translate(20px,20px);
+        }
+    </style>
+</head>
+<body>
+	<div class="navbar">
+		<a class="active" href="Index.html">Home</a>
+		<a href="Doners.html">Donors</a>
+		<a href="Registraion.html">Registration</a>
+		<a href="./donateloginpage.html">Login</a>
+		<a href="clips.html">Clips</a>
+        <a href="Aboutus.html">About Us</a>
+		<div class="search-container">
+			<form action="/search">
+				<input type="text" style="border:none;font-size: 12px;" placeholder="Search" name="search">&nbsp&nbsp
+				<button  style="border:none;font-size: 12px;" type="submit">Search</button>
+			</form>
+		</div>
+	</div>
+    <div id="prashu">
+        <div id="prashupic"></div>
+        <div id="prashuinfo">
+        <center><h3><br>KORNENI PRASHANT</h3>
+        <p>This is Prashanth From Srikakulam I completed Graduation in <br>
+           Batcelor Of technology(EEE)Upto now  Worked on IOT based <br>
+           baby Monitering system for smart CRADLE and TRAINED IN <br>
+           FULL STACK JAVA Development.<br>
+           instagram:brown_eyes045<br>
+        </p>
+        </center></div>
+    </div>
+    <div id="vijaybabu">
+        <div id="vijaypic"></div>
+        <div id="vijayinfo"><center><br><h3>SUDAMALLA VIJAYBABU</h3>
+            <p>This is Vijaybabu From VIZAG I completed Graduation in <br>
+               Bachelor of Science in computer science Upto now  Worked on <br>
+               Amazon Associate Support Role( 2 Years Expericed) <br>
+               FULL STACK JAVA Development.<br>
+               instagram:brown_eyes045<br>
+            </p></center></div>
+    </div>
+    <div id="bhavani">
+        <div id="bhavanipic"></div>
+        <div id="bhavaniinfo">
+            <center><br><h3>AKULA BHAVANI</h3>
+                <p>This is Bhavani From Hyderabad I completed Graduation in <br>
+                   Bachelor of Science in computer science Upto now  Worked as <br>
+                   Maths Teacher(1 Years Expericed) <br>
+                   FULL STACK JAVA Development.<br>
+                   instagram:bhavani8341<br>
+                </p></center>
+        </div>
+    </div>
+    <div id="leela">
+        <div id="leelapic"></div>
+        <div id="leelainfo">
+            <center><br><h3>VUNTA LEELAPRASAD</h3>
+                <p>This is Leelaprasad From Tirupathi I completed Graduation in <br>
+                   Bachelor of Science in computer science Upto now  Worked on <br>
+                   <!-- Amazon Associate Support Role( 2 Years Expericed) <br> -->
+                   FULL STACK JAVA Development.<br>
+                   telegram:leelaprasadvunta<br>
+                </p></center>
+        </div>
+    </div>
+    <div id="baghya">
+        <div id="baghyapic"></div>
+        <div id="baghyainfo"><br><center><h3>CHILAKAPATI BHAGYALAKSHMI</h3>
+            <p>This is Bhagya From NEllore I completed Graduation in <br>
+               Bachelor of Science in computer  Upto now  Worked on <br>
+               <!-- Amazon Associate Support Role( 2 Years Expericed) <br> -->
+               FULL STACK .NET<br>
+               instagram:bhagyalakshmi_1733<br>
+            </p></center></div>
+    </div>
+    <div id="raja">
+        <div id="rajapic"></div>
+        <div id="rajainfo">
+            <center><br><h3>EEDI RAJARAO</h3>
+                <p>This is Eedi Rajarao From Srikakulam I completed Graduation in <br>
+                   Batcelor Of technology(EEE)Upto now  Worked on Speed control of<br>
+                   DC motor by VOICE COMMAND and TRAINED IN <br>
+                   FULL STACK JAVA Development.<br>
+                   instgaram: rajadhigreat
+                </p>
+                </center>
+        </div>
+    </div>
+    <div id="soumya">
+        <div id="soumyapic"></div>
+        <div id="soumyainfo"><br>
+           <center> <h3>THANUGULA SOUMYA</h3>
+                <p>This is Soumya From Karimnagar I completed Graduation in <br>
+                   Bachelor of Science in computer science Upto now  Worked as <br>
+                   FULL STACK JAVA Development.<br>
+                   instagram:_unluky_gurl__<br>
+                </p></center>
+        </div>
+    </div>
+    <div id="naveen">
+        <div id="naveenpic"></div>
+        <div id="naveeninfo"><br><center><h3>CHAGANTI NAVEEN</h3>
+            <p>This is Naveen From Khammam I completed Graduation in <br>
+               Bachelor of Technology in ECE Upto now  Worked as <br>
+               FULL STACK JAVA Development.<br>
+               instagram:naveen__chaudary<br>
+            </p></center></div>
+    </div>
+    <div id="praveen">
+        <div id="praveenpic"></div>
+        <div id="praveeninfo"><br><center><h3>BADHINI PRAVEEN</h3>
+            <p>This is Praveen From Kadiri I completed Graduation in <br>
+               Bachelor of Science in computer science Upto now  Worked as <br>
+               FULL STACK JAVA Development.<br>
+               instagram:<br>
+            </p></center></div>
+    </div>
+    <div id="sainath">
+        <div id="saipic"></div>
+        <div id="saiinfo"><br><center><h3>ALAMPALLY SAINATH</h3>
+            <p>This is Sainath From Mahabubnagar I completed Graduation in <br>
+               bastrop technology in computer science and engineering Upto now  Worked as <br>
+               FULL STACK JAVA Development.<br>
+               instagram:alampallysainath<br>
+            </p></center></div>
+    </div>
+    <div class="clearfix"></div>
+	<marquee id="marquee" style="background-color: rgb(248, 116, 116); "><h3>“Tears of a mother cannot save her Child. But your Blood can.”</h3></marquee>
+    <div class="footer">
+		<br>
+		<p>About Us</p>
+		<p>Why Donate?</p>
+		<p>Contact Us</p>
+		<p>Queries</p>
+		<ul id="footer1">
+            <li><a href="https://www.facebook.com/watch/"><i class="fa fa-facebook-official">F</i></a></li>
+			<li><a href="https://www.instagram.com/"><i class="fa fa-instagram">I</i></a></li>
+			<li><a href="https://www.youtube.com/"><i class="fa fa-youtube">Y</i></a></li>
+			<li><a href="https://twitter.com/Twitter?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eaut"><i class="fa fa-twitter">T</i></a></li>
+		</ul>
+		<p>&copy; 2023 Blood Donation Website. All rights reserved.</p>
+		<p>Created by: Protocol 10-April Batch</p>
+		<p>Contact us at <a href="mailto:contact@blooddonationwebsite.com">contact@blooddonationwebsite.com</a></p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Donate</title>
+    <link rel="icon" type="image/x-icon" href="./bloodicon.png">
+
+	<style>
+        body{
+           padding: 0px;
+           margin:0px;
+        }
+		.navbar {
+			background-color: #223122; 
+			overflow: hidden; 
+			position: fixed; 
+			top: 0; 
+			width: 100%; 
+		}
+		.navbar a {
+			float: left; 
+			color: #f2f2f2; 
+			text-align: center;
+			padding: 14px 16px; 
+			text-decoration:solid; 
+			font-size: 17px; 
+			transition: background-color 0.3s ease; 
+		}
+		.navbar a:hover {
+			background-color: #ddd;
+			color: black;
+            font-size: 20px;
+		}
+		.active {
+			background-color: #4CAF50;
+			color: white;
+		}
+		.search-container {
+			float: right;
+		}
+		input[type=text] {
+			padding: 6px;
+			margin-top: 8px;
+			font-size: 17px;
+			border: none;
+			border-radius: 5px;
+		}
+		button[type=submit] {
+			float: right;
+			padding: 6px 10px;
+			margin-top: 8px;
+			margin-right: 16px;
+			background: #ddd;
+			font-size: 17px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+        select{
+            border: none;
+            background-color: #223122; 
+            font-size: 20px;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+        #a:hover{
+            background-color: rgb(227, 103, 103);
+        }
+    
+       #message
+       {
+         font-size: 20px;
+       }
+	   .clearfix {
+			clear: both;
+		} 
+        body{
+           padding: 0PX;
+           margin:0px;
+        }
+		.navbar {
+			background-color: #223122; 
+			overflow: hidden; 
+			position: fixed; 
+			top: 0; 
+			width: 100%; 
+			z-index: 1;
+		}
+		.navbar a {
+			float: left; 
+			color: #f2f2f2; 
+			text-align: center;
+			padding: 14px 16px; 
+			text-decoration:solid; 
+			font-size: 17px; 
+			transition: background-color 0.3s ease; 
+		}
+		.navbar a:hover {
+			background-color: #ddd;
+			color: black;
+            font-size: 20px;
+		}
+		.active {
+			background-color: #4CAF50;
+			color: white;
+		}
+		.search-container {
+			float: right;
+			border: none;
+		}
+		input[type=text] {
+			padding: 6px;
+			margin-top: 8px;
+			font-size: 17px;
+			border: none;
+			border-radius: 5px;
+		}
+		button[type=submit] {
+			float: right;
+			padding: 6px 10px;
+			margin-top: 8px;
+			margin-right: 16px;
+			background: #ddd;
+			font-size: 17px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			border: solid black;
+
+		}
+		.clearfix {
+			clear: both;
+		}
+        .footer {
+			background-color: #272626;
+			text-align: start;
+			font-size: 14px;
+			padding: 20px;
+			height: 50vh;
+			color: rgb(244, 241, 241);
+		}
+
+		.footer a {
+			color: #777;
+			text-decoration: none;
+		}
+
+		.footer a:hover {
+			color: #555;
+		}
+
+		.footer ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: inline-block;
+		}
+
+		.footer ul li {
+			display: inline-block;
+			margin: 0 10px;
+		}
+
+		.footer ul li a {
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			background-color: #555555;
+			background-size: 100%;
+			color: #fff;
+			text-align: center;
+			line-height: 30px;
+			border-radius: 50%;
+			transition: all 0.3s ease-in-out;
+		}
+
+		.footer ul li a:hover {
+			transform: translateY(-5px);
+			box-shadow: 10px 15px 20px rgba(24, 243, 24, 0.3);
+			color:#f50bea;
+		}
+		
+         marquee{
+            margin-top: 50vh;
+         }  
+		 #footer1{
+			margin-left: 40vw;
+		 } 
+		 .bg
+		 {
+			width: 20vw;
+            height: 20vh;
+			background-color: red;
+	        position: left;
+            display: flex;
+		 } 
+		 #hed
+		 {
+			width: 40vw;
+		    height: 80vh;
+		    float: right;
+			background-image: url(./donerpagehead.jpeg);
+			background-size: contain;
+			background-repeat: no-repeat;
+		 }
+		 
+		 #img1
+		 {
+			width: 60vw;
+			height: 80vh;
+			margin-top: 80px;
+            padding: 100px 50px 50px 50px;
+			color: #555;
+			font-size: 20px;
+			align-items: center;
+			justify-content: center;
+		 }
+		 #img1:hover{
+               color: rgb(229, 109, 109);
+               transition: all 5s;
+		 }
+		 #p1
+		 {
+			width: 30vw;
+			height: 40vh;
+            background-image: url(./01.jpg);
+			float: right;
+			margin-right: 40px ;
+			margin-top: 160px;
+			border-radius: 30px;
+			background-repeat: no-repeat;
+			background-size: cover;
+			box-shadow: silver 0px 0px 20px;
+		
+		 }
+		 #p11
+		 {
+			width: 40vw;
+			height: 40vh;
+		   margin-left: 40px;
+		   margin-top: 160px;
+		   border-radius: 30px;
+		   box-shadow: silver 0px 0px 20px;
+           font-size: 20px;
+		   background-size: contain;
+		   display: flex;
+		   align-items: center;
+		   justify-content: center;
+		   text-align: center;
+		   color: black;
+		 }
+		 #p2
+		 {
+			width: 30vw;
+			height: 40vh;
+			float: none;
+			margin-top:160px;
+            margin-left: 40px;
+			border-radius: 30px;
+            background-repeat: no-repeat;
+			background-size: cover;
+			box-shadow: silver 0px 0px 20px;
+			background-image: url(./02.webp);
+		 }
+		 #p22
+		 {
+			width: 40vw;
+			height: 40vh;
+		   float: right;
+		   margin-top: 160px;
+		   margin-right: 35px;
+		   border-radius: 30px;
+		   box-shadow: silver 0px 0px 20px;
+           font-size: 18px;
+		   background-size: contain;
+		   display: flex;
+		   align-items: center;
+		   justify-content: center;
+		   text-align: center;
+		   color: black;
+
+		 }
+		 #p3
+		 {
+			width: 30vw;
+			height: 40vh;
+            background-image: url(./03.jpeg);
+			float: right;
+			margin-right: 40px ;
+			margin-top: 160px;
+			border-radius: 30px;
+			background-repeat: no-repeat;
+			background-size: cover;
+			box-shadow: silver 0px 0px 20px;
+	       
+		 }
+		 #p33
+		 {
+			width: 40vw;
+			height: 40vh;
+		   margin-left: 40px;
+		   margin-top: 160px;
+		   border-radius: 30px;
+		   background-size: contain;
+		   display: flex;
+		   font-size: 20px;
+		   align-items: center;
+		   justify-content: center;
+		   text-align: center;
+		   color: black;
+		   box-shadow: silver 0px 0px 20px;
+
+		 }
+		 #p4
+		 {
+			width: 30vw;
+			height: 40vh;
+			float: none;
+			margin-top:160px;
+            margin-left: 40px;
+			border-radius: 30px;
+			background-repeat: no-repeat;
+			background-size: cover;
+			box-shadow: silver 0px 0px 20px;
+	        background-image: url(./004.png);
+		 }
+		 #p44
+		 {
+			width: 40vw;
+			height: 40vh;
+		   float: right;
+		   margin-top: 160px;
+		   margin-right: 35px;
+		   border-radius: 30px;
+		   background-size: contain;
+		   display: flex;
+		   align-items: center;
+		   justify-content: center;
+		   text-align: center;
+		   color: black;
+		   box-shadow: silver 0px 0px 20px;
+		 }
+		#p4:hover
+		 {
+			width: 38vw;
+			height: 44vh;
+			box-shadow: #eb9494 0px 0px 30px;
+			transition: all 2s;
+		 }
+		 #p44:hover
+		 {
+			box-shadow: #edacac 0px 0px 30px;
+			transition: all 0s;
+			font-size: 25px;
+		 }
+		 #p1:hover
+		 {
+			width: 38vw;
+			height: 44vh;
+			box-shadow: #eb9494 0px 0px 30px;
+			transition: all 2s;
+		 }
+		 #p11:hover
+		 {
+			box-shadow: #edacac 0px 0px 30px;
+			transition: all 0s;
+			font-size: 25px;
+		 }
+		 #p2:hover
+		 {
+			width: 38vw;
+			height: 44vh;
+			box-shadow: #eb9494 0px 0px 30px;
+			transition: all 2s;
+		 }
+		 #p22:hover
+		 {
+			box-shadow: #edacac 0px 0px 30px;
+			transition: all 0s;
+			font-size: 20px;
+		 }
+		 #p3:hover
+		 {
+			width: 38vw;
+			height: 44vh;
+			box-shadow: #eb9494 0px 0px 30px;
+			transition: all 2s;
+		 }
+		 #p33:hover
+		 {
+			box-shadow: #edacac 0px 0px 30px;
+			transition: all 0s;
+			font-size: 25px;
+		 }
+	</style>
+</head>
+<body>
+	<div class="navbar">
+		<a class="active" href="Index.html">Home</a>
+		<a href="emergency.html" id="a"> Emergency +</a>
+		<a href="upcoming.html">Up coming Donars</a>
+		<a href="past.html">Past Donars</a>
+        <a href="#">
+        <select>
+            <option style="display: none;">Blood Group</option>
+            <option class="a">A<sup>+</sup></option>
+            <option class="a">A<sup>-</sup></option>
+            <option class="a">B<sup>+</sup></option>
+            <option class="a">B<sup>-</sup></option>
+            <option class="a">O<sup>+</sup></option>
+            <option class="a">O<sup>+</sup></option>
+        </select>
+		</a>
+	</div>
+<div id="hed">
+</div>
+<div id="img1">
+	<h1> “You Can’t Buy A Life For Someone With Money, But You Can Save A Life Of Someone By Donating Blood To Him.”</h1>
+</div>
+    <div class="sm" id="p1"></div>
+	<div class="sm" id="p11">Blood is the most precious gift that anyone can give to another person – the gift of life. A decision to donate your blood can save a life, or even several if your blood is separated into its components – red cells, platelets and plasma – which can be used individually for patients with specific conditions.</div>
+    <br><br><br>
+	<div class="sm" id="p22">
+
+		A+ (A positive) if you have A and rhesus antigens.
+		A− (A negative) if you have A antigens but don't have rhesus antigens.
+		B+ (B positive) if you have B and rhesus antigens.
+		B− (B negative) if you have B antigens but don't have rhesus antigens.
+		AB+ (AB positive) if you have A, B and rhesus antigens.
+		AB− (AB negative) if you have A and B antigens but don't have rhesus antigens.
+		O+ (O positive) if you have neither A nor B antigens but you have rhesus antigens.
+		O− (O negative) if you don't have A, B or rhesus antigens.</div>
+	<div class="sm" id="p2"></div>
+	
+	<div class="sm" id="p3"></div>
+	<div class="sm" id="p33">How often can I donate blood? You must wait at least eight weeks (56 days) between donations of whole blood and 16 weeks (112 days) between Power Red donations. Whole blood donors can donate up to 6 times a year. Platelet apheresis donors may give every 7 days up to 24 times per year.</div>
+	<br><br><br>
+	<div class="sm" id="p44">During menstruation, your body loses blood for three to five days, so the idea that you shouldn’t donate blood while you are on your period seems to come from a rational place. Except, this is simply not true! On World Blood Donor Day, let’s break this age-old myth!</div>
+	<div class="sm" id="p4"></div>
+<div class="clearfix"></div>
+<marquee id="marquee" style="background-color: rgb(248, 116, 116); "><h3>“Tears of a mother cannot save her Child. But your Blood can.”</h3></marquee>
+<div class="footer">
+	<br>
+	<p>About Us</p>
+	<p>Why Donate?</p>
+	<p>Contact Us</p>
+	<p>Queries</p>
+	<ul id="footer1">
+        <li><a href="https://www.facebook.com/watch/"><i class="fa fa-facebook-official">F</i></a></li>
+        <li><a href="https://www.instagram.com/"><i class="fa fa-instagram">I</i></a></li>
+        <li><a href="https://www.youtube.com/"><i class="fa fa-youtube">Y</i></a></li>
+        <li><a href="https://twitter.com/Twitter?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eaut"><i class="fa fa-twitter">T</i></a></li>
+	</ul>
+	<p>&copy; 2023 Blood Donation Website. All rights reserved.</p>
+	<p>Created by: Protocol 10-April Batch</p>
+	<p>Contact us at <a href="mailto:contact@blooddonationwebsite.com">contact@blooddonationwebsite.com</a></p>
+</div>
+</body>
+</html>

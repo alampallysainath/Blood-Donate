@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Donate</title>
+    <link rel="icon" type="image/x-icon" href="./bloodicon.png">
+
+	<style>
+        body{
+           padding: 0px;
+           margin:0px;
+           z-index: 0;
+        }
+        body:hover
+        {
+            background-color: red 0px 0px 20px;
+        }
+		.navbar {
+			background-color: #223122; 
+			overflow: hidden; 
+			position: fixed; 
+			top: 0; 
+			width: 100%; 
+		}
+
+		
+		.navbar a {
+			float: left; 
+			color: #f2f2f2; 
+			text-align: center;
+			padding: 14px 16px; 
+			text-decoration:solid; 
+			font-size: 17px; 
+			transition: background-color 0.3s ease; 
+		}
+		.navbar a:hover {
+			background-color: #ddd;
+			color: black;
+            font-size: 20px;
+		}
+		.active {
+			background-color: #4CAF50;
+			color: white;
+		}
+		.search-container {
+			float: right;
+		}
+		input[type=text] {
+			padding: 6px;
+			margin-top: 8px;
+			font-size: 17px;
+			border: none;
+			border-radius: 5px;
+		}
+		button[type=submit] {
+			float: right;
+			padding: 6px 10px;
+			margin-top: 8px;
+			margin-right: 16px;
+			background: #ddd;
+			font-size: 17px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		.clearfix {
+			clear: both;
+		}
+        #b
+        {
+            align-items: center;
+            justify-content: center;
+        }
+      /*  #div1.img
+        {
+           width: 60vw;
+           height: 60vh;
+        border-radius: 5px;
+        margin-top: 100px;
+        margin-left: 310px;
+        }*/
+        #img1
+        {
+            width: 60vw;
+            height: 60vh;
+            border-radius: 20px;
+            margin-top: 100px;
+        margin-left: 270px;
+        opacity: 1;
+        z-index: 1;
+        box-shadow: black 0px 0px 20px;
+        
+        }
+        .group
+        {
+            display: flex;
+            flex-direction: column;
+            margin-top: 40px;
+            margin-left: 30px;
+           border-radius: 100%;
+           height: 4vh;
+           width: 4vw;
+           color: rgb(28, 132, 50);
+           border: none;
+           font-size: 20px;
+           font-weight: bold;
+           box-shadow:0px 0px 10px silver ;
+           padding-left: 10px;
+        }
+        .group:hover
+        {
+            background-color: rgb(223, 43, 43);
+            color: whitesmoke;
+            box-shadow: red 0px 0px 20px;
+            height: 5vh;
+           width: 5vw;
+           padding-left: 20px;
+           padding-top: 5px;
+           visibility: visible;
+           transition: 0.2s;
+        }
+        #tab
+        {
+            border: black solid;
+            visibility: visible;
+            margin-left: 150px;
+            padding: 3px 3px 3px 3px;
+            border: none;
+
+        }
+        .head
+        {
+            border: rgba(63, 61, 61, 0.224) solid;
+            font-family: 'Prompt', sans-serif;
+        }
+        #hed1
+        {
+            font-size: 20px;
+            letter-spacing: 2px;
+            word-spacing:3px;
+            color: #3bad3b;
+            font-family: 'Prompt', sans-serif; 
+            padding: 4px 4px 4px 4px;
+   }
+   #tab :hover
+   {
+     color: rebeccapurple;
+   }
+    #inp
+    {
+        font-size: 15px;
+        color: rgb(242, 247, 247);
+        background-image: radial-gradient( rgb(234, 203, 145),rgb(227, 61, 61));
+        font-weight: bold;
+        border-radius: 20px;
+        border: none;
+        width: 7vw;
+        height: 5vh;
+        box-shadow: 2px 2px 2px rgb(100, 95, 95);
+    }
+    #img1:hover
+        {
+            box-shadow: rgba(47, 212, 35, 0.534) 0px 0px 50px;
+        }
+    #inp:hover{
+        background-image: radial-gradient(rgb(234, 203, 145),green );
+    }
+    #tbh
+    {
+        border-radius: 10px;
+        border: none;
+    }
+    body{
+           padding: 0PX;
+           margin:0px;
+        }
+		.navbar {
+			background-color: #223122; 
+			overflow: hidden; 
+			position: fixed; 
+			top: 0; 
+			width: 100%; 
+			z-index: 1;
+		}
+		.navbar a {
+			float: left; 
+			color: #f2f2f2; 
+			text-align: center;
+			padding: 14px 16px; 
+			text-decoration:solid; 
+			font-size: 17px; 
+			transition: background-color 0.3s ease; 
+		}
+		.navbar a:hover {
+			background-color: #ddd;
+			color: black;
+            font-size: 20px;
+		}
+		.active {
+			background-color: #4CAF50;
+			color: white;
+		}
+		.search-container {
+			float: right;
+			border: none;
+		}
+		input[type=text] {
+			padding: 6px;
+			margin-top: 8px;
+			font-size: 17px;
+			border: none;
+			border-radius: 5px;
+		}
+		button[type=submit] {
+			float: right;
+			padding: 6px 10px;
+			margin-top: 8px;
+			margin-right: 16px;
+			background: #ddd;
+			font-size: 17px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			border: solid black;
+
+		}
+		.clearfix {
+			clear: both;
+		}
+        .footer {
+			background-color: #272626;
+			text-align: start;
+			font-size: 14px;
+			padding: 20px;
+			height: 50vh;
+			color: rgb(244, 241, 241);
+		}
+
+		.footer a {
+			color: #777;
+			text-decoration: none;
+		}
+
+		.footer a:hover {
+			color: #555;
+		}
+
+		.footer ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: inline-block;
+		}
+
+		.footer ul li {
+			display: inline-block;
+			margin: 0 10px;
+		}
+
+		.footer ul li a {
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			background-color: #555555;
+			background-size: 100%;
+			color: #fff;
+			text-align: center;
+			line-height: 30px;
+			border-radius: 50%;
+			transition: all 0.3s ease-in-out;
+		}
+
+		.footer ul li a:hover {
+			transform: translateY(-5px);
+			box-shadow: 10px 15px 20px rgba(24, 243, 24, 0.3);
+			color:#f50bea;
+		}
+		
+         marquee{
+            margin-top: 50vh;
+         }  
+		 #footer1{
+			margin-left: 40vw;
+		 }  
+	</style>
+</head>
+<body>
+	<div class="navbar">
+		<a class="active" href="Index.html">Home</a>
+		
+		<a id="b">Up Coming Donars</a>
+        </div>
+        <div id="div1"><img id="img1" src="./pastpagepc.jpeg"></div>
+        <input type="button" value="A+" class="group">
+        <div id="tbh">
+            <table id="tab" >
+                <tr id="hed1">
+                    <th id="aa" class="head">Name</th>
+                    <th id="aa" class="head">Age</th>
+                    <th id="aa" class="head">Weight</th>
+                    <th id="aa" class="head">Health Status</th>
+                    <th id="aa" class="head">Blood Group</th>
+                    <th id="aa" class="head">Adress</th>
+                    <th id="aa" class="head">Email</th>
+                </tr>
+                <tr>
+                    <td class="head"> S.Rahul</td>
+                    <td class="head">30</td>
+                    <td class="head">67 kg</td>
+                    <td class="head">Good</td>
+                    <td class="head">A+</td>
+                    <td class="head">Hi-Tech City</td>
+                    <td class="head">rahul123@gmail.com</td>
+                </tr>
+                <tr>
+                    <td class="head">V.Ramu</td>
+                    <td class="head">26</td>
+                    <td class="head">67 kg</td>
+                    <td class="head">Good</td>
+                    <td class="head">A+</td>
+                    <td class="head">Madhapur</td>
+                    <td class="head">ramuvera@gmail.com</td>
+                </tr>
+                <tr>
+                    <td class="head">A.Rani</td>
+                    <td class="head">28</td>
+                    <td class="head">75 kg</td>
+                    <td class="head">Good</td>
+                    <td class="head">A+</td>
+                    <td class="head">Kphb</td>
+                    <td class="head">rani34@gmail.com</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="req"><input id="inp" type="submit" value="Request"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <input type="button" value="A-" class="group">
+        <div>
+            <table id="tab">
+                <tr id="hed1">
+                    <th class="head">Name</th>
+                    <th class="head">Age</th>
+                    <th class="head">Weight</th>
+                    <th class="head">Health Status</th>
+                    <th class="head">Blood Group</th>
+                    <th class="head">Adress</th>
+                    <th class="head">Email</th>
+                </tr>
+                <tr>
+                    <td class="head"> S.Rahul</td>
+                    <td class="head">30</td>
+                    <td class="head">67 kg</td>
+                    <td class="head">Good</td>
+                    <td class="head">A+</td>
+                    <td class="head">Hi-Tech City</td>
+                    <td class="head">rahul123@gmail.com</td>
+                </tr>
+                <tr>
+                    <td class="head">V.Ramu</td>
+                    <td class="head">26</td>
+                    <td class="head">67 kg</td>
+                    <td class="head">Good</td>
+                    <td class="head">A+</td>
+                    <td class="head">Madhapur</td>
+                    <td class="head">ramuvera@gmail.com</td>
+                </tr>
+                <tr>
+                    <td class="head">A.Rani</td>
+                    <td class="head">28</td>
+                    <td class="head">75 kg</td>
+                    <td class="head">Good</td>
+                    <td class="head">A+</td>
+                    <td class="head">Kphb</td>
+                    <td class="head">rani34@gmail.com</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="req"><input id="inp" type="submit" value="Request"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <input type="button" value="B+" class="group">
+        <div>
+            <table id="tab">
+                <tr id="hed1">
+                    <th class="head">Name</th>
+                    <th class="head">Age</th>
+                    <th class="head">Weight</th>
+                    <th class="head">Health Status</th>
+                    <th class="head">Blood Group</th>
+                    <th class="head">Adress</th>
+                    <th class="head">Email</th>
+                </tr>
+                <tr>
+                    <td class="head"> S.Rahul</td>
+                    <td class="head">30</td>
+                    <td class="head">67 kg</td>
+                    <td class="head">Good</td>
+                    <td class="head">A+</td>
+                    <td class="head">Hi-Tech City</td>
+                    <td class="head">rahul123@gmail.com</td>
+                </tr>
+                <tr>
+                    <td class="head">V.Ramu</td>
+                    <td class="head">26</td>
+                    <td class="head">67 kg</td>
+                    <td class="head">Good</td>
+                    <td class="head">A+</td>
+                    <td class="head">Madhapur</td>
+                    <td class="head">ramuvera@gmail.com</td>
+                </tr>
+                <tr>
+                    <td class="head">A.Rani</td>
+                    <td class="head">28</td>
+                    <td class="head">75 kg</td>
+                    <td class="head">Good</td>
+                    <td class="head">A+</td>
+                    <td class="head">Kphb</td>
+                    <td class="head">rani34@gmail.com</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="req"><input id="inp" type="submit" value="Request"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <input type="button" value="B-" class="group">
+        <div>
+            <table id="tab">
+                <tr id="hed1">
+                    <th class="head">Name</th>
+                    <th class="head">Age</th>
+                    <th class="head">Weight</th>
+                    <th class="head">Health Status</th>
+                    <th class="head">Blood Group</th>
+                    <th class="head">Adress</th>
+                    <th class="head">Email</th>
+                </tr>
+                <tr>
+                    <td class="head"> S.Rahul</td>
+                    <td class="head">30</td>
+                    <td class="head">67 kg</td>
+                    <td class="head">Good</td>
+                    <td class="head">A+</td>
+                    <td class="head">Hi-Tech City</td>
+                    <td class="head">rahul123@gmail.com</td>
+                </tr>
+                <tr>
+                    <td class="head">V.Ramu</td>
+                    <td class="head">26</td>
+                    <td class="head">67 kg</td>
+                    <td class="head">Good</td>
+                    <td class="head">A+</td>
+                    <td class="head">Madhapur</td>
+                    <td class="head">ramuvera@gmail.com</td>
+                </tr>
+                <tr>
+                    <td class="head">A.Rani</td>
+                    <td class="head">28</td>
+                    <td class="head">75 kg</td>
+                    <td class="head">Good</td>
+                    <td class="head">A+</td>
+                    <td class="head">Kphb</td>
+                    <td class="head">rani34@gmail.com</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="req"><input id="inp" type="submit" value="Request"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <input type="button" value="O+" class="group">
+        <div>
+            <table id="tab">
+                <tr id="hed1">
+                    <th class="head">Name</th>
+                    <th class="head">Age</th>
+                    <th class="head">Weight</th>
+                    <th class="head">Health Status</th>
+                    <th class="head">Blood Group</th>
+                    <th class="head">Adress</th>
+                    <th class="head">Email</th>
+                </tr>
+                <tr>
+                    <td class="head"> S.Rahul</td>
+                    <td class="head">30</td>
+                    <td class="head">67 kg</td>
+                    <td class="head">Good</td>
+                    <td class="head">A+</td>
+                    <td class="head">Hi-Tech City</td>
+                    <td class="head">rahul123@gmail.com</td>
+                </tr>
+                <tr>
+                    <td class="head">V.Ramu</td>
+                    <td class="head">26</td>
+                    <td class="head">67 kg</td>
+                    <td class="head">Good</td>
+                    <td class="head">A+</td>
+                    <td class="head">Madhapur</td>
+                    <td class="head">ramuvera@gmail.com</td>
+                </tr>
+                <tr>
+                    <td class="head">A.Rani</td>
+                    <td class="head">28</td>
+                    <td class="head">75 kg</td>
+                    <td class="head">Good</td>
+                    <td class="head">A+</td>
+                    <td class="head">Kphb</td>
+                    <td class="head">rani34@gmail.com</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="req"><input id="inp" type="submit" value="Request"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <input type="button" value="O-" class="group">
+        <div>
+            <table id="tab">
+                <tr id="hed1">
+                    <th class="head">Name</th>
+                    <th class="head">Age</th>
+                    <th class="head">Weight</th>
+                    <th class="head">Health Status</th>
+                    <th class="head">Blood Group</th>
+                    <th class="head">Adress</th>
+                    <th class="head">Email</th>
+                </tr>
+                <tr>
+                    <td class="head"> S.Rahul</td>
+                    <td class="head">30</td>
+                    <td class="head">67 kg</td>
+                    <td class="head">Good</td>
+                    <td class="head">A+</td>
+                    <td class="head">Hi-Tech City</td>
+                    <td class="head">rahul123@gmail.com</td>
+                </tr>
+                <tr>
+                    <td class="head">V.Ramu</td>
+                    <td class="head">26</td>
+                    <td class="head">67 kg</td>
+                    <td class="head">Good</td>
+                    <td class="head">A+</td>
+                    <td class="head">Madhapur</td>
+                    <td class="head">ramuvera@gmail.com</td>
+                </tr>
+                <tr>
+                    <td class="head">A.Rani</td>
+                    <td class="head">28</td>
+                    <td class="head">75 kg</td>
+                    <td class="head">Good</td>
+                    <td class="head">A+</td>
+                    <td class="head">Kphb</td>
+                    <td class="head">rani34@gmail.com</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="req"><input id="inp" type="submit" value="Request"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <input type="button" value="AB+" class="group">
+        <div>
+            <table id="tab">
+                <tr id="hed1">
+                    <th class="head">Name</th>
+                    <th class="head">Age</th>
+                    <th class="head">Weight</th>
+                    <th class="head">Health Status</th>
+                    <th class="head">Blood Group</th>
+                    <th class="head">Adress</th>
+                    <th class="head">Email</th>
+                </tr>
+                <tr>
+                    <td class="head"> S.Rahul</td>
+                    <td class="head">30</td>
+                    <td class="head">67 kg</td>
+                    <td class="head">Good</td>
+                    <td class="head">A+</td>
+                    <td class="head">Hi-Tech City</td>
+                    <td class="head">rahul123@gmail.com</td>
+                </tr>
+                <tr>
+                    <td class="head">V.Ramu</td>
+                    <td class="head">26</td>
+                    <td class="head">67 kg</td>
+                    <td class="head">Good</td>
+                    <td class="head">A+</td>
+                    <td class="head">Madhapur</td>
+                    <td class="head">ramuvera@gmail.com</td>
+                </tr>
+                <tr>
+                    <td class="head">A.Rani</td>
+                    <td class="head">28</td>
+                    <td class="head">75 kg</td>
+                    <td class="head">Good</td>
+                    <td class="head">A+</td>
+                    <td class="head">Kphb</td>
+                    <td class="head">rani34@gmail.com</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="req"><input id="inp" type="submit" value="Request"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <input type="button" value="AB-" class="group">
+        <div>
+            <table id="tab">
+                <tr id="hed1">
+                    <th class="head">Name</th>
+                    <th class="head">Age</th>
+                    <th class="head">Weight</th>
+                    <th class="head">Health Status</th>
+                    <th class="head">Blood Group</th>
+                    <th class="head">Adress</th>
+                    <th class="head">Email</th>
+                </tr>
+                <tr>
+                    <td class="head"> S.Rahul</td>
+                    <td class="head">30</td>
+                    <td class="head">67 kg</td>
+                    <td class="head">Good</td>
+                    <td class="head">A+</td>
+                    <td class="head">Hi-Tech City</td>
+                    <td class="head">rahul123@gmail.com</td>
+                </tr>
+                <tr>
+                    <td class="head">V.Ramu</td>
+                    <td class="head">26</td>
+                    <td class="head">67 kg</td>
+                    <td class="head">Good</td>
+                    <td class="head">A+</td>
+                    <td class="head">Madhapur</td>
+                    <td class="head">ramuvera@gmail.com</td>
+                </tr>
+                <tr>
+                    <td class="head">A.Rani</td>
+                    <td class="head">28</td>
+                    <td class="head">75 kg</td>
+                    <td class="head">Good</td>
+                    <td class="head">A+</td>
+                    <td class="head">Kphb</td>
+                    <td class="head">rani34@gmail.com</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="req"><input id="inp" type="submit" value="Request"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="clearfix"></div>
+	<marquee id="marquee" style="background-color: rgb(248, 116, 116); "><h3>“Tears of a mother cannot save her Child. But your Blood can.”</h3></marquee>
+    <div class="footer">
+		<br>
+		<p>About Us</p>
+		<p>Why Donate?</p>
+		<p>Contact Us</p>
+		<p>Queries</p>
+		<ul id="footer1">
+            <li><a href="https://www.facebook.com/watch/"><i class="fa fa-facebook-official">F</i></a></li>
+			<li><a href="https://www.instagram.com/"><i class="fa fa-instagram">I</i></a></li>
+			<li><a href="https://www.youtube.com/"><i class="fa fa-youtube">Y</i></a></li>
+			<li><a href="https://twitter.com/Twitter?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eaut"><i class="fa fa-twitter">T</i></a></li>
+		</ul>
+		<p>&copy; 2023 Blood Donation Website. All rights reserved.</p>
+		<p>Created by: Protocol 10-April Batch</p>
+		<p>Contact us at <a href="mailto:contact@blooddonationwebsite.com">contact@blooddonationwebsite.com</a></p>
+	</div>
+</body>
+</html>

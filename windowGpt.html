@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+#modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50vh;
+  width: 50vw;
+  background-color: #fff;
+}
+
+#close {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: ALL 0.5S;
+}
+#close:hover {
+  rotate: 300deg;
+}
+
+    </style>
+</head>
+<body>
+    <div id="overlay">
+        <div id="modal">
+          <span id="close">&times;</span>
+        </div>
+      </div>
+      <script>
+        window.onload = function() {
+  setTimeout(function() {
+    document.getElementById("overlay").style.display = "block";
+  }, 5000);
+}
+
+document.getElementById("close").onclick = function() {
+  document.getElementById("overlay").style.display = "none";
+}
+
+      </script>
+</body>
+</html>

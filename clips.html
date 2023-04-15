@@ -1,0 +1,359 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <title>Doners</title> 
+    <link rel="icon" type="image/x-icon" href="./bloodicon.png">
+    <style>    
+    *{ 
+            margin: 0px; 
+            padding: 0px; 
+        } 
+        body{
+           padding: 0px;
+           margin:0px;
+        }
+		.navbar {
+			background-color: #223122; 
+			overflow: hidden; 
+			position: fixed; 
+			top: 0; 
+			width: 100%; 
+			z-index: 1;
+		}
+		.navbar a {
+			float: left; 
+			color: #f2f2f2; 
+			text-align: center;
+			padding: 14px 16px; 
+			text-decoration:solid; 
+			font-size: 17px; 
+			transition: background-color 0.3s ease; 
+		}
+		.navbar a:hover {
+			background-color: #ddd;
+			color: black;
+            font-size: 20px;
+		}
+		.active {
+			background-color: #4CAF50;
+			color: white;
+		}
+		.search-container {
+			float: right;
+			border: none;
+		}
+		input[type=text] {
+			padding: 6px;
+			margin-top: 8px;
+			font-size: 17px;
+			border: none;
+			border-radius: 5px;
+		}
+		button[type=submit] {
+			float: right;
+			padding: 6px 10px;
+			margin-top: 8px;
+			margin-right: 16px;
+			background: #ddd;
+			font-size: 17px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			border: solid black;
+
+		}
+		.clearfix {
+			clear: both;
+		}
+  .footer {
+    background-color: #272626;
+    padding: 20px;
+	/* display: flex; */
+    text-align: center;
+    font-size: 14px;
+    line-height: 40px;
+	  height: 50vh;
+    color: rgb(220, 217, 217);
+	}
+		.footer a {
+			color: #777;
+			text-decoration: none;
+		}
+
+		.footer a:hover {
+			color: #555;
+		}
+
+		.footer ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: inline-block;
+		}
+
+		.footer ul li {
+			display: inline-block;
+			margin: 0 10px;
+		}
+
+		.footer ul li a {
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			background-color: #555555;
+			background-size: 100%;
+			color: #fff;
+			text-align: center;
+			line-height: 30px;
+			border-radius: 50%;
+			transition: all 0.3s ease-in-out;
+		}
+
+		.footer ul li a:hover {
+			transform: translateY(-5px);
+			box-shadow: 10px 15px 20px rgba(24, 243, 24, 0.3);
+			color:#f50bea;
+		}
+        #container2{
+            width: 100%;
+            height: 4000px;
+            padding-top: 10vh;
+            background-image: radial-gradient(rgb(251, 40, 40)),rgb(rgb(230, 69, 69));
+
+          }
+          #india{
+            width: 100%;
+            height: 900px;
+            background-color: black;
+            clip-path: polygon(45% 0, 100% 0%, 99% 100%, 0% 100%);
+          }
+          #US{
+            width: 100%;
+            height: 900px;
+            background-color: black;
+            clip-path: polygon(0 0, 53% 0, 100% 100%, 0% 100%);
+          }
+          #UK{
+            width: 100%;
+            height: 900px;
+            background-color: black;
+            clip-path: polygon(68% 0, 100% 0%, 99% 100%, 0% 100%);
+          }
+          #RUSSIA{
+            width: 100%;
+            height: 900px;
+            background-color: black;
+            clip-path: polygon(0 0, 53% 0, 100% 100%, 0% 100%);
+          }
+          #video,#video1,#video2,#video3{
+            width: 100%;
+            height: 100px;
+          }
+           
+          #innervideo{
+            width: 100%;
+          }
+          iframe{
+            width: 100%;
+            height: 350px;
+         
+          }
+          #ind{
+            position: absolute;
+            left: 9vw;
+            letter-spacing: 5px;
+            font-size: 60px;
+            color: black;
+            text-shadow: 5px 5px 5px white;
+          }
+          #p{
+            position:absolute;
+            top: 140px;
+            padding-left: 3vw;
+            font-size: 20px;
+          }
+          #us{
+            position: absolute;
+            right:100px;
+            letter-spacing: 10px;
+            font-size: 60px;
+            color: black;
+            text-shadow: 5px 5px 5px white;
+          }
+          #p1{
+            position:absolute;
+            top: 1050px;
+            left:73vw;
+            font-size: 20px;
+          }
+          #uk{
+            position: absolute;
+            left:180px;
+            letter-spacing: 10px;
+            font-size: 60px;
+            color: black;
+            text-shadow: 5px 5px 5px white;
+          }
+          #p2{
+            position:absolute;
+            top: 1950px;
+            left:5vw;
+            font-size: 20px;
+          }
+          #russia{
+            position: absolute;
+            right:150px;
+            letter-spacing: 10px;
+            font-size: 60px;
+            color: black;
+            text-shadow: 5px 5px 5px white;
+          }
+          #p3{
+            position:absolute;
+            top: 2850px;
+           right: 80px;
+            font-size: 20px;
+          }
+          marquee{
+            padding-top: 18px;
+           font-size: 20px;
+         } 
+    </style> 
+</head> 
+<body> 
+  <div class="navbar">
+		<a class="active" href="Index.html">Home</a>
+		<a href="Doners.html">Donors</a>
+		<a href="Registraion.html">Registration</a>
+		<a href="./donateloginpage.html">Login</a>
+		<a href="clips.html">Clips</a>
+    <a href="Aboutus.html">About Us</a>
+		<div class="search-container">
+			<form action="/search">
+				<input type="text" style="border:none;font-size: 12px;" placeholder="Search" name="search">&nbsp&nbsp
+				<button  style="border:none;font-size: 12px;" type="submit">Search</button>
+			</form>
+		</div>
+	</div>
+    <div id="container2">
+        <div id="cont1">
+        <h1 id="ind">Hyderabad</h1>
+        <p id="p">
+            ⦿ Sanjeevini Blood Bank<br>
+            ⦿ Sree Balaji Blood Ban<br>
+            ⦿ Deccan's Blood Centre<br>
+            ⦿ Sreekara Blood Bank<br>
+            ⦿ Chiranjeevi Blood Bank<br>
+            ⦿ Aditya Blood Bank<br>
+            ⦿ Mother Teresa Blood Bank<br>
+            ⦿ NTR Blood Bank<br>
+            ⦿ RedCross Blood Bank<br>
+            ⦿ Vivekananda Blood Bank<br>
+            ⦿ Asin Blood Bank<br>
+            ⦿ Ozone Blood Bank<br>
+        </p>
+        <div id="india">
+            <div id="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d23762.018652411858!2d78.37329489530241!3d17.48368964553949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d17.480943099999998!2d78.39559799999999!4m5!1s0x3bcb91eca9cc544b%3A0x2c5501b1ae9ad6dd!2sLife%20Voluntary%20Blood%20Bank%2C%20Isihta%20women&#39;s%20clinic%2C%20MIG%3A%20786%2C%20540%2C%20Rd%20Number%201%2C%20opp.%20GHMC%20Park%2C%20Kukatpally%20Housing%20Board%20Colony%2C%20Kukatpally%2C%20Hyderabad%2C%20Telangana%20500072!3m2!1d17.485170699999998!2d78.3989696!5e0!3m2!1sen!2sin!4v1681494733469!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
+                </iframe>
+            </div>
+            <div id="video">
+                <video id="innervideo" src="./clip1.mp4" autoplay muted loop></video>
+            </div>
+        </div>
+        </div>
+        <div id="cont2">
+        <h1 id="us">Banglore</h1>
+        <p id="p1">
+            ⦿ Saina Philomena Blood Bank<br>
+            ⦿ Banglore Medical Services<br>
+            ⦿ Life Care Blood Bank<br>
+            ⦿ Mallya Blood Bank<br>
+            ⦿ Yashomathi Blood Care<br>
+            ⦿ Jeeva Raksha Blood Bank<br>
+            ⦿ Banglore Bapitist Blood Bank<br>
+            ⦿ Marathahalli Blood Bank<br>
+            ⦿ Lions Blood Bank<br>
+            ⦿ Fortis Blood Bank<br>
+            ⦿ Saint Martha Blood Bank<br>
+            ⦿ Navarang Blood Bank<br>
+        </p>
+        <div id="US">
+            <div id="map1">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d3942393.0158085064!2d75.76166706902417!3d15.213539632087004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d17.480943099999998!2d78.39559799999999!4m5!1s0x3bae15d1eddedc69%3A0xa4827fed2dcc9f44!2sXJ42%2BWGR%20St%20Philomena%20Blood%20Bank%2C%20N%20St%2C%20Shanthala%20Nagar%2C%20East%20Zone%2C%20Bengaluru%2C%20Karnataka%20560047!3m2!1d12.9573624!2d77.6012578!5e0!3m2!1sen!2sin!4v1681496062797!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>              
+              </iframe>
+            <div id="video1">
+                <video id="innervideo" src="./clip2.mp4" autoplay muted loop></video>
+            </div>
+          </div>
+        
+        </div>
+        <div id="cont3">
+            <h1 id="uk">Chennai</h1>
+            <p id="p2">
+                 ⦿ Chennai Blood Bank<br>
+                 ⦿ Indian voluntery Blood Bank<br>
+                 ⦿ Appolo Blood Bank<br>
+                 ⦿ Annai Teresa Blood Bank<br>
+                 ⦿ Dhanvandri Blood Bank<br>
+                 ⦿ Bharat Blood Bank<br>
+                 ⦿ Billroth Blood Bank<br>
+                 ⦿ Vijaya Blood Bank<br>
+                 ⦿ Fortis Malar Blood Bank<br>
+                 ⦿ Kumaran Blood Bank<br>
+                 ⦿ Medway Blood Bank<br>
+                 ⦿ Kanchi Kamakoti Blood Bank<br>
+            </p>
+        <div id="UK">
+            <div id="map2">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d3936683.7029530182!2d77.27242818881435!3d15.515724035674923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d17.480943099999998!2d78.39559799999999!4m5!1s0x3a526585b92e04b7%3A0x75f086ca71abc4d1!2sChennai%20Blood%20Centre-%20Plasma%20blood%20bank%2CSingle%20Donor%20Platelet%20Centre%2C%2070%2C%2042%2FT1%26T2%203rd%20Floor%2C%20Sindhoor%20Shopping%20Complex%205th%20Street%2C%202nd%20St%2C%20X%20Block%2C%20Anna%20Nagar%2C%20Chennai%2C%20Tamil%20Nadu%20600040!3m2!1d13.085045599999999!2d80.2134078!5e0!3m2!1sen!2sin!4v1681496701811!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>              </iframe>            </div>
+            <div id="video2">
+                <video id="innervideo" src="./clip3.mp4" autoplay muted loop></video>
+            </div>
+        </div>
+        </div>
+        <div id="cont4">
+            <h1 id="russia">Kerala</h1>
+            <p id="p3">
+            ⦿ Blood Doners Blood Bank<br>
+            ⦿ Sunrise Blood Bank<br>
+            ⦿ Doners Kerala<br>
+            ⦿ Lifeline Super Specality<br>
+            ⦿ Mother Blood Bank<br>
+            ⦿ Amritha Blood Bank<br>
+            ⦿ Sacret Heart Blood Bank<br>
+            ⦿ Government Blood Bank<br>
+            ⦿ Kozikode Blood Bank<br>
+            ⦿ Holy Croos Blood Bank<br>
+            ⦿ Cannanore Blood Bank<br>
+            </p>
+        <div id="RUSSIA">
+            <div id="map3">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61156.786802390554!2d78.34166545334651!3d17.459485127467644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9149a09b6831%3A0x9239a879e4d3b1fc!2sAaraadhya%20blood%20center!5e0!3m2!1sen!2sin!4v1681375601050!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+              </iframe>            
+            </div>
+            <div id="video3">
+                <video id="innervideo" src="./clip4.mp4" autoplay muted loop></video>
+            </div>
+        </div>
+        </div>
+    </div> 
+    <div class="clearfix"></div>
+	<marquee style="background-color: rgb(248, 116, 116);height:8vh;"><h3>“Tears of a mother cannot save her Child. But your Blood can.”</h3></marquee>
+    <div class="footer" id="footer1">
+		<p>About Us</p>
+		<p>Why Donate?</p>
+		<p>Contact Us</p>
+		<p>Queries</p>
+		<ul>
+      <li><a href="https://www.facebook.com/watch/"><i class="fa fa-facebook-official">F</i></a></li>
+			<li><a href="https://www.instagram.com/"><i class="fa fa-instagram">I</i></a></li>
+			<li><a href="https://www.youtube.com/"><i class="fa fa-youtube">Y</i></a></li>
+			<li><a href="https://twitter.com/Twitter?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eaut"><i class="fa fa-twitter">T</i></a></li>
+		</ul>
+		<p>&copy; 2023 Blood Donation Website. All rights reserved.</p>
+		<p>Created by: Protocol 10-April Batch</p>
+		<p>Contact us at <a href="mailto:contact@blooddonationwebsite.com">contact@blooddonationwebsite.com</a></p>
+	</div>
+    </body> 
+    </html>

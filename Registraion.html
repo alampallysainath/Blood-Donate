@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Document</title>
+     <style>
+       body{
+           padding: 0px;
+           margin:0px;
+        }
+		.navbar {
+			background-color: #223122; 
+			overflow: hidden; 
+			position: fixed; 
+			top: 0;
+      height: 8.5vh; 
+			width: 100%; 
+			z-index: 1;
+		}
+		.navbar a {
+			float: left; 
+			color: #f2f2f2; 
+			text-align: center;
+			padding: 14px 16px; 
+			text-decoration:solid; 
+			font-size: 17px; 
+			transition: background-color 0.3s ease; 
+		}
+		.navbar a:hover {
+			background-color: #ddd;
+			color: black;
+      font-size: 20px;
+		}
+		.active {
+			background-color: #4CAF50;
+			color: white;
+		}
+		.search-container {
+			float: right;
+			border: none;
+		}
+		.clearfix {
+			clear: both;
+		}
+        .footer {
+    background-color: #272626;
+    padding: 20px;
+	/* display: flex; */
+    text-align: center;
+    font-size: 14px;
+	  height: 50vh;
+    color: rgb(220, 217, 217);
+	}
+		.footer a {
+			color: #777;
+			text-decoration: none;
+		}
+
+		.footer a:hover {
+			color: #555;
+		}
+
+		.footer ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: inline-block;
+		}
+
+		.footer ul li {
+			display: inline-block;
+			margin: 0 10px;
+		}
+
+		.footer ul li a {
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			background-color: #555555;
+			background-size: 100%;
+			color: #fff;
+			text-align: center;
+			line-height: 30px;
+			border-radius: 50%;
+			transition: all 0.3s ease-in-out;
+		}
+
+		.footer ul li a:hover {
+			transform: translateY(-5px);
+			box-shadow: 10px 15px 20px rgba(24, 243, 24, 0.3);
+			color:#f50bea;
+		}
+#registration {
+  width: 400px;
+  margin: 3vh;
+  height:115vh;
+  margin-left: 35vw;
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  box-shadow: 0px 0px 10px black;
+  border-radius: 5px;
+}
+#registration:hover {
+  box-shadow: 0px 0px 10px rgb(63, 3, 205);
+  border-radius: 10px;
+}
+.form {
+  margin-bottom: 10px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="password"], textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #7d7d7d;
+  box-sizing: border-box;
+}
+
+.phone-group {
+  display: flex;
+  align-items: center;
+}
+
+#country-code {
+  width: 25%;
+  margin-left: 10px;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+#subbut {
+  background-color: #7e4030;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease-in-out;
+}
+button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+#resebut{
+  background-color: greenyellow;
+  border:none;
+}
+     </style>
+</head>
+<body>
+  <div class="navbar">
+		<a class="active" href="Index.html">Home</a>
+		<a href="Doners.html">Donors</a>
+		<a href="Registraion.html">Registration</a>
+		<a href="./donateloginpage.html">Login</a>
+		<a href="clips">Clips</a>
+    <a href="Aboutus.html">About Us</a>
+		<div class="search-container">
+		</div>
+	</div>
+  <div style="padding:20px;margin-top:30px;background-color: white;height:130vh;z-index: 0;">
+    <form id="registration" action="" method="POST">
+        <center><h2 style="color:cornflowerblue">Register Here</h2></center>
+        <div class="form">
+          <label for="firstname">First Name:</label>
+          <input type="text" id="firstname" name="firstname" required>
+        </div>
+        <div class="form">
+          <label for="surname">Surname:</label>
+          <input type="text" id="surname" name="surname" required>
+        </div>
+        <div class="form">
+          <label for="phone">Phone Number:</label>
+          <div class="phone-group">
+            <input type="tel" id="phone" name="phone" required>
+            <select id="country-code" name="country-code" required>
+              <option value="">--Select--</option>
+              <option value="+91">+91</option>
+              <option value="+1">+1</option>
+              <option value="+44">+44</option>
+              <option value="+61">+61</option>
+            </select>
+          </div>
+        </div>
+        <div class="form">
+          <label for="blood-group">Blood Group:</label>
+          <select id="blood-group" name="blood-group" required>
+            <option value="">--Select--</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+          </select>
+        </div>
+        <div class="form">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form">
+          <label for="address">Address:</label>
+          <textarea id="address" name="address" required></textarea>
+        </div>
+        <div class="form">
+          <input type="checkbox" id="terms" name="terms" required>
+          <label for="terms">I agree to the terms and conditions</label>
+        </div>
+        <button type="submit" id="subbut" style="float:left">Register</button> <input type="reset" id="resebut" style="float:right">
+      </form>
+       </div>
+       <div class="clearfix"></div>
+       <br>
+       <br>
+       <br>
+	<marquee style="background-color: rgb(248, 116, 116);height:10vh;"><h3>“Tears of a mother cannot save her Child. But your Blood can.”</h3></marquee>
+    <div class="footer" id="footer1">
+		<p>About Us</p>
+		<p>Why Donate?</p>
+		<p>Contact Us</p>
+		<p>Queries</p>
+		<ul>
+      <li><a href="https://www.facebook.com/watch/"><i class="fa fa-facebook-official">F</i></a></li>
+			<li><a href="https://www.instagram.com/"><i class="fa fa-instagram">I</i></a></li>
+			<li><a href="https://www.youtube.com/"><i class="fa fa-youtube">Y</i></a></li>
+			<li><a href="https://twitter.com/Twitter?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eaut"><i class="fa fa-twitter">T</i></a></li>
+		</ul>
+		<p>&copy; 2023 Blood Donation Website. All rights reserved.</p>
+		<p>Created by: Protocol 10-April Batch</p>
+		<p>Contact us at <a href="mailto:contact@blooddonationwebsite.com">contact@blooddonationwebsite.com</a></p>
+	</div>
+</body>
+</html>

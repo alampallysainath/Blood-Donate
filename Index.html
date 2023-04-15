@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Donate</title>
+	<link rel="icon" type="image/x-icon" href="./bloodicon.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+	<style>
+        body{
+           padding: 0px;
+           margin:0px;
+        }
+		.navbar {
+			background-color: #223122; 
+			overflow: hidden; 
+			position: fixed; 
+			top: 0; 
+			width: 100%; 
+			z-index: 1;
+		}
+		.navbar a {
+			float: left; 
+			color: #f2f2f2; 
+			text-align: center;
+			padding: 14px 16px; 
+			text-decoration:solid; 
+			font-size: 17px; 
+			transition: background-color 0.3s ease; 
+		}
+		.navbar a:hover {
+			background-color: #ddd;
+			color: black;
+            font-size: 20px;
+		}
+		.active {
+			background-color: #4CAF50;
+			color: white;
+		}
+		.search-container {
+			float: right;
+			border: none;
+		}
+		input[type=text] {
+			padding: 6px;
+			margin-top: 8px;
+			font-size: 17px;
+			border: none;
+			border-radius: 5px;
+		}
+		button[type=submit] {
+			float: right;
+			padding: 6px 10px;
+			margin-top: 8px;
+			margin-right: 16px;
+			background: #ddd;
+			font-size: 17px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			border: solid black;
+
+		}
+		.clearfix {
+			clear: both;
+		}
+        .footer {
+    background-color: #272626;
+    padding: 20px;
+	/* display: flex; */
+    text-align: center;
+    font-size: 14px;
+	height: 50vh;
+    color: rgb(220, 217, 217);
+	}
+		.footer a {
+			color: #777;
+			text-decoration: none;
+		}
+
+		.footer a:hover {
+			color: #555;
+		}
+
+		.footer ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: inline-block;
+		}
+
+		.footer ul li {
+			display: inline-block;
+			margin: 0 10px;
+		}
+
+		.footer ul li a {
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			background-color: #555555;
+			background-size: 100%;
+			color: #fff;
+			text-align: center;
+			line-height: 30px;
+			border-radius: 50%;
+			transition: all 0.3s ease-in-out;
+		}
+
+		.footer ul li a:hover {
+			transform: translateY(-5px);
+			box-shadow: 10px 15px 20px rgba(24, 243, 24, 0.3);
+			color:#f50bea;
+		}
+		#whywill{
+		font-size: 10vh;
+		padding-left: 10vh;
+		padding-top: 5vh;
+		font-family: 'Nunito', sans-serif;
+		}
+		#slogon{
+			font-family: 'Nunito', sans-serif;
+			color:rgb(102, 99, 99);
+			padding-left: 60vh;
+		}
+		#img1{
+			width:25vw;
+			height:40vh;
+			background-image: url(./b1.gif);
+			background-size: 100%;
+			float:left;
+			margin-left: 5vw;
+			background-repeat: no-repeat;
+			margin-top: 4vh;
+			border-radius: 20px;
+			color: transparent;
+			transition: all 3s;
+		}
+		#img1:hover{
+        background-image: none;
+        color: black;
+		background-color: rgb(170, 247, 135);
+		font-family: 'Lora', serif;
+        font-family: 'Nunito', sans-serif;
+        font-family: 'Playfair Display', serif;
+    	}
+		#img2{
+			width:25vw;
+			height:40vh;
+			background-image: url(./b2.gif);
+			background-size: 100%;
+			float:right;
+			margin-right: 5vw;
+			background-repeat: no-repeat;
+			margin-top: 4vh;
+			border-radius: 20px;
+			color: transparent;
+			transition: all 3s;
+		}
+		#img2:hover{
+        background-image: none;
+        color: black;
+		background-color: rgb(170, 247, 135);
+		font-family: 'Lora', serif;
+        font-family: 'Nunito', sans-serif;
+        font-family: 'Playfair Display', serif;
+    	}
+		#img3{
+			width:25vw;
+			height:30vh;
+			background-image: url(./b3.gif);
+			background-size: 100%;
+			float:left;
+			margin-left: 5vw;
+			background-repeat: no-repeat;
+			border-radius: 20px;
+		}
+		#img4{
+			width:25vw;
+			height:30vh;
+			background-image: url(./b4.gif);
+			background-size: 100%;
+			float:right;
+			margin-right: 5vw;
+			background-repeat: no-repeat;
+			border-radius: 20px;
+		}
+		#vid1{
+			width:25vw;
+			height:40vh;
+			margin-left: 40vw;
+			margin-top: 0vh;
+			border-radius: 20px;
+			transition: all 2s;
+			box-shadow: 0px 0px 10px rgb(40, 229, 112);
+		}
+		#vid1:hover{
+			width:100vw;
+			height:80vh;
+			margin-left: 0vw;
+			border-radius: 60%;
+			box-shadow: none;
+			
+		}
+		#d1{
+			width:48vw;
+			height: 50vh;
+			background-color: red;
+			float: left;
+			margin-left: 10px;
+			border-radius: 20px;
+			margin-top: 10vh;
+			background-image: url(./bd1.jpg);
+			background-size: 100%;
+		}
+		#d2{
+			width:48vw;
+			height: 50vh;
+			background-image: url(./bd2.jpg);
+			background-size: 100%;
+			float: right;
+			margin-right: 10px;
+			border-radius: 20px;
+			margin-top: 10vh;
+		}
+		#d3{
+			width:48vw;
+			height: 50vh;
+			background-color: rgb(102, 206, 33);
+			float: left;
+			margin-left: 10px;
+			background-image: url(./bd3.jpg);
+			background-size: 100%;
+			border-radius: 20px;
+			margin-top: 20vh;
+		}
+		#d4{
+			width:48vw;
+			height: 50vh;
+			background-color: rgb(137, 13, 87);
+			float: right;
+			margin-right: 10px;
+			border-radius: 20px;
+			margin-top: 20vh;
+			background-image: url(./bd4.jpg);
+			background-size: 100%;
+		}
+		#textbox1{
+			width:40vw;
+			height: 50vh;
+			float: right;
+			margin-left: 10px;
+			border-radius: 20px;
+			margin-top: 10vh;
+		}
+		#textbox2{
+			width:40vw;
+			height: 50vh;
+			float: left;
+			margin-right: 10px;
+			border-radius: 20px;
+			margin-top: 10vh;
+		}
+		#textbox3{
+			width:40vw;
+			height: 50vh;
+			float: right;
+			margin-left: 10px;
+			border-radius: 20px;
+			margin-top: 20vh;
+		}
+		#textbox4{
+			width:40vw;
+			height: 50vh;
+			float: left;
+			margin-right: 10px;
+			border-radius: 20px;
+			margin-top: 20vh;
+		}
+		.design{
+			transition: all .8s;
+		}
+		.design:hover{
+			box-shadow: 0px 0px 15px blueviolet ;
+		}
+		.two {
+  transform: rotateY(40deg);
+  animation: two 10s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes two {
+  0% {
+    transform: rotateY(0);
+  }
+  100% {
+    transform: rotateY(50deg);
+  }
+}
+h1{
+	display: flex;
+	justify-content: center;
+	font-family: 'Lora', serif;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Playfair Display', serif;
+}
+p{
+	display: flex;
+	justify-content: start;
+	font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Lora', serif;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Playfair Display', serif;
+	font-size: 15px;
+	font-weight: 20px;
+}
+	#footer1{
+		padding-left: 1vw;
+		text-align: center;
+		 }  
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+#modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 12px;
+  transform: translate(-50%, -50%);
+  height: 66vh;
+  width: 50vw;
+  background-image: url(./dontworry.gif);
+  background-size: 100%;
+  box-shadow: 0px 0px 10px rgb(254, 96, 175);
+}
+#modal:hover{
+	box-shadow: 0px 0px 10px rgb(243, 240, 99);
+}
+#close {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+#close:hover {
+  rotate: 300deg;
+}
+	</style>
+</head>
+<body>
+	<div class="navbar">
+		<a class="active" href="Index.html">Home</a>
+		<a href="Doners.html">Donors</a>
+		<a href="Registraion.html">Registration</a>
+		<a href="./donateloginpage.html">Login</a>
+		<a href="clips">Clips</a>
+		<a href="Aboutus.html">About Us</a>
+		<div class="search-container">
+			<form action="/search">
+				<input type="text" style="border:none;font-size: 12px;" placeholder="Search" name="search">&nbsp&nbsp
+				<button  style="border:none;font-size: 12px;" type="submit">Search</button>
+			</form>
+		</div>
+	</div>
+	<div style="padding:20px;margin-top:30px;background-color: white;height:2500px;z-index: 0;">
+		<div id="interace">
+			<h1 id="whywill">Why will you donate today?</h1>
+			<h3 id="slogon">Sometimes money cannot save life but donated blood can! </h3>
+			<div id="img1" class="design"><center><h1> Blood Groups</h1></center>
+			<pre>
+	 🩸A RhD positive (A+)
+	 🩸A RhD negative (A-)
+	 🩸B RhD positive (B+)
+	 🩸B RhD negative (B-)
+	 🩸O RhD positive (O+)
+	 🩸O RhD negative (O-)
+	 🩸AB RhD positive (AB+)
+	 🩸AB RhD negative (AB-)</pre></div>
+			<div id="img2" class="design"><center><h1>Giving blood</h1></center>
+			<pre>
+      •are fit and healthy
+      •weigh at least 50kg (7st 12lb)
+      •are 17-66 years old
+      (or 70 if you've given blood before)
+      •are over 70 and have given blood in 
+	  the last 2 years
+			</pre>
+			</div>
+			<br>
+			<div><video id="vid1" src="./bloodvideo.mp4" autoplay muted loop></video></div>
+			<br>
+			<div id="img3" class="design"></div>
+			<div id="img4" class="design"></div>
+			<div id="d1" class="imgs"></div>
+			<div id="textbox1"  class="element two">
+			<center><h1>Group O</h1>
+			<p>Group O can donate red blood cells to anybody. It's the universal donor. Click on a blood type below to learn more. Group O can donate red blood cells to anybody.In an emergency, type O negative red blood cells may be given to anyone — especially if the situation is life-threatening or the matching blood type is in short supply.For emergency transfusions, blood group type O negative blood is the variety of blood that has the lowest risk of causing serious reactions for most people who receive it. Because of this, it's sometimes called the universal blood donor type.</p>
+			</center>
+			</div>
+	        <div id="d2" class="imgs"></div>
+			<div id="textbox2"  class="element two">
+			<center><h1>How often can you donate plasma?</h1></center>
+			<p>With the number of people affected by COVID-19 infection during the second wave only increasing by the day, the demand for the plasma of recovered patients has also gone up tremendously. However, many people still have some inhibitions about donating plasma thinking it might make them more susceptible to the infection once again. But that’s a myth and donating plasma can save lives, stress experts.</p>
+			</div>
+	        <div id="d3" class="imgs"></div>
+			<div id="textbox3"  class="element two">
+			<center><h1>What is a directed donation?</h1></center>
+			<p>A directed donation is the donation of blood or platelets that is designated for a specific patient. There is no scientific evidence that designated blood is safer than blood from other volunteer donors. In fact, directed donors must meet the same eligibility criteria as other volunteer donors A patient must have his/her physician submit a Red Cross Special Collections Order form for the Red Cross to collect blood from the selected donors.</p>
+			</div>
+	        <div id="d4" class="imgs"></div>
+			<div id="textbox4"  class="element two">
+			<center><h1>Boost Your Red Blood Cells</h1></center>
+			<p>. The best sources are red meat (especially beef and liver), poultry, fish, and shellfish. Other foods high in iron include peas, lentils, beans, tofu, dark green leafy vegetables such as spinach, dried fruits such as prunes and raisins, and iron-fortified cereals and breads.iron-rich diet, can help prevent common types of anemia so you can have more energy and feel your best.</p>
+			</div>
+			</div>
+	</div>
+	<div id="overlay">
+        <div id="modal">
+          <span id="close">&times;</span>
+        </div>
+      </div>
+      <script>
+        window.onload = function() {
+  setTimeout(function() {
+    document.getElementById("overlay").style.display = "block";
+  }, 4000);
+}
+
+document.getElementById("close").onclick = function() {
+  document.getElementById("overlay").style.display = "none";
+}
+
+      </script>
+	<div class="clearfix"></div>
+	<marquee style="background-color: rgb(248, 116, 116);height:10vh;"><h3>“Tears of a mother cannot save her Child. But your Blood can.”</h3></marquee>
+    <div class="footer" id="footer1">
+		<p>About Us</p>
+		<p>Why Donate?</p>
+		<p>Contact Us</p>
+		<p>Queries</p>
+		<ul>
+			<li><a href="https://www.facebook.com/watch/"><i class="fa fa-facebook-official">F</i></a></li>
+			<li><a href="https://www.instagram.com/"><i class="fa fa-instagram">I</i></a></li>
+			<li><a href="https://www.youtube.com/"><i class="fa fa-youtube">Y</i></a></li>
+			<li><a href="https://twitter.com/Twitter?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eaut"><i class="fa fa-twitter">T</i></a></li>
+		</ul>
+		<p>&copy; 2023 Blood Donation Website. All rights reserved.</p>
+		<p>Created by: Protocol 10-April Batch</p>
+		<p>Contact us at <a href="mailto:contact@blooddonationwebsite.com">contact@blooddonationwebsite.com</a></p>
+	</div>
+</body>
+</html>
